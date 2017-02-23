@@ -41,14 +41,16 @@
 		{
 		echo '<p>' .$nom. '</p>';
 		}
-		?>
-		<br/>
-		<?php
+		
 		$personne = array ('nom'=>'Nebra', 'prenom' => 'Mathieu', 'age' => 99);
 		foreach ($personne as $label => $detail)//foreach returns label and details
 		{
 			echo '<p>'.$label.' : '.$detail.'</p>';
 		}
+		echo '<pre>';
+		print_r($personne);//tell what's in the array
+		echo'</pre>';
+
 
 		?>
 
