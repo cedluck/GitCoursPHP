@@ -27,11 +27,31 @@
 			echo 'Tu es majeur';
 			}
 		?>
-
+		<br/>
 		<?php
 		$personne = array ('nom' => 'Nebar', 'prenom' => 'Mathieu', 'age' => '99');//formating with an array
 		print_r($personne);//add a print_r to see what's in the array
+		?>
+		<br/>
+
+		<?php
+
+		$noms = array('Mathieu', 'Marie','Robert');
+		foreach($noms as $nom)//function foreach returns the name
+		{
+		echo '<p>' .$nom. '</p>';
+		}
+		?>
+		<br/>
+		<?php
+		$personne = array ('nom'=>'Nebra', 'prenom' => 'Mathieu', 'age' => 99);
+		foreach ($personne as $label => $detail)//foreach returns label and details
+		{
+			echo '<p>'.$label.' : '.$detail.'</p>';
+		}
 
 		?>
+
+
     </body>
 </html>
