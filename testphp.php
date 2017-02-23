@@ -21,11 +21,17 @@
         
         <?php
 			$age = 24;
-			$majeur = ($age >= 18) ? true : false; //ternary condition (condition ternaire)
+			$majeur = ($age >= 18) ? true : false; //ternary condition (condtion ternaire)
 			if ($majeur)
 			{
 			echo 'Tu es majeur';
 			}
+		?>
+
+		<?php
+		$prenoms = array ('Mathieu','Marie','Robert');//formating with an array
+		echo $prenoms[1];
+
 		?>
     </body>
 </html>
