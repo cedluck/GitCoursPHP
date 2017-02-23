@@ -30,7 +30,8 @@
 
 		<?php
 		$prenoms = array ('Mathieu','Marie','Robert');//formating with an array
-		echo $prenoms[1];
+		echo $prenoms[0];
+		echo print_r($prenoms);//add a print_r to see what's in the array
 
 		?>
     </body>
