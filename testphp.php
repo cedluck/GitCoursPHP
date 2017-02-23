@@ -29,9 +29,8 @@
 		?>
 
 		<?php
-		$prenoms = array ('Mathieu','Marie','Robert');//formating with an array
-		echo $prenoms[0];
-		echo print_r($prenoms);//add a print_r to see what's in the array
+		$personne = array ('nom' => 'Nebar', 'prenom' => 'Mathieu', 'age' => '99');//formating with an array
+		print_r($personne);//add a print_r to see what's in the array
 
 		?>
     </body>
