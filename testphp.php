@@ -51,6 +51,38 @@
 		print_r($personne);//tell what's in the array
 		echo'</pre>';
 
+		$coordonnees = array (
+		    'prenom' => 'François',
+		    'nom' => 'Dupont',
+		    'adresse' => '3 Rue du Paradis',
+		    'ville' => 'Marseille');
+
+		if (array_key_exists('nom', $coordonnees))//returns bool true if key found in array
+		{
+		    echo 'La clé "nom" se trouve dans les coordonnées !';//displayed on screen
+		}
+
+		if (array_key_exists('pays', $coordonnees))
+		{
+		    echo 'La clé "pays" se trouve dans les coordonnées !';//not displayed on screen
+		}
+
+		$fruits = array ('Banane', 'Pomme', 'Poire', 'Cerise', 'Fraise', 'Framboise');
+
+		if (in_array('Myrtille', $fruits))//returns bool true if value found in array
+		{
+		    echo 'La valeur "Myrtille" se trouve dans les fruits !';//displyed on screen
+		}
+
+		if (in_array('Cerise', $fruits))
+		{
+		    echo 'La valeur "Cerise" se trouve dans les fruits !';//not displayed on screen
+		}
+		$position = array_search('Fraise', $fruits);//return the key of the value in the array
+		echo '"Fraise" se trouve en position ' . $position . '<br />';
+
+		$position = array_search('Banane', $fruits);
+		echo '"Banane" se trouve en position ' . $position;
 
 		?>
 
