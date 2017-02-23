@@ -9,7 +9,7 @@
         
         <p>
             Cette page contient du code HTML avec des balises PHP.<br />
-            <?php echo 'Cette phrase est générée par PHP.' ?>
+            <?php echo 'Cette phrase est générée par PHP.'?> 
             Voici quelques petits tests :
         </p>
         
@@ -20,7 +20,12 @@
         </ul>
         
         <?php
-           echo 'Cette phrase est aussi générée par PHP.'
-        ?>
+			$age = 24;
+			$majeur = ($age >= 18) ? true : false; //ternary condition (condition ternaire)
+			if ($majeur)
+			{
+			echo 'Tu es majeur';
+			}
+		?>
     </body>
 </html>
