@@ -2,57 +2,62 @@
 <html>
 	<head>
 		<meta charset="utf-8"/>
-		<link rel="stylesheet" type="text/css" href="style.css">
+		<link rel="stylesheet" type="text/css" href="fonts_style/style.css"/>
 		<title>Connection</title>
 	</head>
 	<body>
-		<h1>CONNEXION</h1>
-		<section>
-			<form id="form_connexion" action='connexion.php' method="POST">
-				<p>
-					<label for="Pseudo">Pseudo </label><input type="text" name="pseudo"/><br/><br/>
-					<label for="pass">Mot de passe </label><input type="password" name="pass"/><br/><br/>
-					<input type="submit" value="Se connecter"/>
-				</p>
-			</form>
-		</section>
-		<?php
-		
+		<div id="container">
+			
+				<h1>CONNEXION</h1>
+					
+			<section id="central" style="margin: 100px;">
+				<form  id="form_connexion" action='connexion.php' method="POST">
+						<label for="Pseudo">Pseudo </label><input type="text" name="pseudo"/><br/><br/>
+						<label for="pass">Mot de passe </label><input type="password" name="pass"/><br/><br/>
+						<input id="bouton_form" type="submit" value="Se connecter"/><br/>
+				</form>
+			
+			
+			<?php
+			
 
-		if (isset($_POST['pseudo']) AND ($_POST['pass'])!=NULL)
-		{
-			try
+			if (isset($_POST['pseudo']) AND $_POST['pass']!=NULL)
 			{
-				$bdd = new PDO('mysql:host=127.0.0.1;port=8889;dbname=test;charset=utf8', 'root', 'root');
-			} 
-			catch (Exception $e)
-			{
-				die('Erreur : '.$e->getMessage());
-			}
+				try
+				{
+					$bdd = new PDO('mysql:host=127.0.0.1;port=8889;dbname=test;charset=utf8', 'root', 'root');
+				} 
+				catch (Exception $e)
+				{
+					die('Erreur : '.$e->getMessage());
+				}
 
-			$pass_hache= sha1($_POST['pass']);
-			$req = $bdd->prepare('SELECT id, pseudo FROM membres WHERE pseudo = :pseudo  AND pass = :pass');
-			$req->execute(array('pseudo'=>htmlspecialchars($_POST['pseudo']), 'pass'=> $pass_hache));
-			$resultat = $req->fetch();
-				
-			if (!$resultat)
-			{
-				echo '<h2>Mauvais identifiant ou mot de passe !</h2><br/><br/>';
-			}
+				$pass_hache= sha1($_POST['pass']);
+				$req = $bdd->prepare('SELECT id, pseudo, email, pass FROM membres WHERE pseudo = :pseudo  AND pass = :pass');
+				$req->execute(array('pseudo'=>htmlspecialchars($_POST['pseudo']), 'pass'=> $pass_hache));
+				$resultat = $req->fetch();
+					
+				if (!$resultat)
+				{
+					echo '<h2>Mauvais identifiant ou mot de passe !</h2><br/><br/>';
+				}
+				else
+				{
+				    session_start();
+				    $_SESSION['id'] = $resultat['id'];
+				    $_SESSION['pseudo'] = $resultat['pseudo'];
+				    $_SESSION['email'] = $resultat['email'];
+				    $_SESSION['pass'] = $resultat['pass'];
+				    header('location:index.php');
+				}
+			}	
 			else
 			{
-			    session_start();
-			    $_SESSION['id'] = $resultat['id'];
-			    $_SESSION['pseudo'] = $resultat['pseudo'];
-			    header('location:index.php');
+				echo '<h2>Saisissez votre pseudo et votre mot de passe.</h2>'; 
 			}
-		}	
-		else
-		{
-			echo '<h2>Saisissez votre pseudo et votre mot de passe.</h2>'; 
-		}
-			
-		?>
-			
+				
+			?>
+			</section>
+		</div>			
 	</body>
 </html>
