@@ -33,21 +33,36 @@ body
 	margin: auto;
 	display: flex;
 	flex-direction: column;
-	justify-content: space-between;
+	/*justify-content: space-between;*/
 	font-family: "caviar_dreamsregular", arial, Verdana, sans-serif;
 }
-
-
+#allerEnHautIcone
+{
+	position: fixed;
+	right:  200px;
+	bottom: 150px;
+	opacity: 0.3;
+}
+#allerEnHautIcone:hover
+{
+	opacity: 1;
+}
 a
 {
 	text-decoration: none;
-	font-size: 0.9em;
+	color: white;
 }
+a:hover
+{
+	text-decoration: underline;
+}
+
 /*HEADER*/
 #entete
 {
-	margin: -21px 0px 0px 0px;
-	background: url("background.jpg") ;
+	margin: -24px 0px 0px 0px;
+	background-image: url("rto-web-banner.png");
+	
 	position: fixed;
 	align-items: center;
 	border-radius: 0px 0px 100px 0px;
@@ -65,7 +80,7 @@ a
 }
 .bouton_top:hover
 {
-	opacity: 0.8;
+	opacity: 0.5;
 }
 .bouton_top:active
 {
@@ -74,8 +89,7 @@ a
 .bouton_nav
 {
 	background: #002D44;
-	padding: 5px;
-	font-size: 1.3em;
+	padding: 10px 30px;
 	color: white;
 	text-align: center;
 	border-radius:20px 0px 20px 0px;
@@ -104,6 +118,7 @@ h1
 	box-shadow:  3px 3px 0px rgba(84, 203, 221, 1);
 	padding: 26px 40px 0px 24px;
 	margin: auto;
+	text-align: center;
 	font-family: 'spin_cycle_otregular', arial;
 	font-weight: bold;
 	font-size: 3.6em;
@@ -113,31 +128,49 @@ h1
 /*CENTRAL BLOCKS*/
 #central
 {
-	margin-top:270px;	
+	margin-top: 350px;
+	display: flex;
+	flex-direction: row;
+}
+.column
+{
+	width:50%;
+	padding:10px;
+	margin:20px;
+	text-align: justify;
+}
+.imgfloat
+{
+	float:left;
+	margin:20px;
 }
 /*nav bar*/
 nav
 {
 	/*border: solid yellow;*/
-	background: #002D44/*url("background.jpg") no-repeat;*/;	
+	background:#002D44/*url("background.jpg") no-repeat;*/;	
 	width:130px;
 	box-shadow: 2px 2px 2px black;
-	border-radius: 0px 0px 20px 0px;
+	border-radius: 0px 20px 20px 0px;
 	text-align: left;
-	padding: 20px;
+	padding: 10px;
 	font-size: 1.2em;
 	position: fixed;
 }
-/*nav buttons*/
+/* index nav buttons */
 .bouton
 {
 	display:flex;
+	font-style: italic;
+	font-weight: bold;
 	flex-direction: column;
 	color: black;
-	font-size: 1em;
+	font-size: 0.7em;
 	text-align: center;
-	border-radius: 20px 0px 20px 0px;
-	box-shadow: 2px 2px 2px black;
+	border: 2px solid black;
+	padding: 5px 0px 5px 0px;
+	box-shadow: 2px 2px 0px black;
+	border-radius: 10px 0px 10px 0px;
 }
 .bouton:nth-child(2)/*c++*/
 {
@@ -172,6 +205,7 @@ nav
 {
 	box-shadow: 0px 0px 0px black;
 }
+
 /*sections and articles*/
 section
 {
@@ -181,16 +215,16 @@ section
 article
 {
 	/*border: solid purple;*/
-	padding: 100px;
+	padding:30px;
+	margin-top:-40px;
 	margin-left: 150px;
 }
 
 /*FORMULAIRES*/
 #form_connexion
 { 
-	position: relative;
 	margin: auto;
-	width: 270px;
+	width: 290px;
 	border: solid grey;
 	border-radius: 20px;
 	text-align: right;
@@ -199,7 +233,7 @@ article
 #form_inscription
 {
 	margin: auto;
-	width: 390px;
+	width: 400px;
 	border: solid grey;
 	border-radius: 20px;
 	text-align: right;
@@ -239,21 +273,68 @@ article
 h2 
 {
 	text-align: center;
-	font-size: 0.8em;
+	font-size: 0.7em;
 }
 h3
 {
 	border-radius: 10px 0px 10px 0px;
-	font-size: 0.8em;
-	box-shadow: 2px 2px 0px black;
-	text-align:right;
+	font-size: 1em;
+	box-shadow: 1px 1px 0px black;
 	background: #55a1e0;
-	color: white/* #1871A3*/;
+	color: white;
 	padding: 5px 5px 5px 5px;
 }
+
 img
 {
-	box-shadow: 2px 2px 0px black;
+	border: 0px solid black;
+	margin-right: 20px;
 }
-
-
+.console
+{
+	background: #393F4C;
+	color: white;
+	font-size: 0.9em;
+	padding: 10px;
+	border-radius: 10px;
+	font-family: verdana;
+}
+h4
+{
+	border-radius: 10px 0px 10px 0px;
+	font-size: 0.7em;
+	border: 2px solid black;
+	box-shadow: 1px 1px 0px black;
+	background: #55a1e0;
+	color: white;
+	padding: 3px 3px 3px 10px;
+}
+h4:hover
+{
+	opacity: 0.6;
+}
+h5
+{
+	font-size: 0.8em;
+	font-family: arial;
+	color: black;
+	margin-right: 200px;
+}
+p
+{
+	font-size: 1.1em;
+}
+#footer
+{
+	display:flex;
+	justify-content: center;
+	background:#55a1e0;
+	height: 100px;
+	border-radius: 0px 0px 	10px 10px;
+	padding-bottom:  30px;
+	vertical-align: center;
+}
+li
+{
+	list-style-type: none;
+}

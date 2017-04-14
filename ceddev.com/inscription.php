@@ -1,30 +1,34 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>Inscription</title>
-		<meta charset="utf-8"/>
-		<link rel="stylesheet" type="text/css" href="fonts_style/style.css"/>
-		
-	</head>
-	<body>
-		<div id="container">
-						
-			<h1>INSCRIPTION</h1>
-			<a href="index.php"><h2>Cliquez ici pour retourner au site.</h2></a>'
-			
-			<section id="central" style="margin: 50px;">
-		
-				<form id="form_inscription" action="inscription.php" method="post">
-					<label for="pseudo">Pseudo * </label><input type="text" name="pseudo"/><br/><br/>
-					<label for="pass">Mot de passe * </label><input type="password" name="pass"/><br/><br/>
-					<label for="confirmation">Retapez votre mot de passe * </label><input type="password" name="confirmation"/><br/><br/>
-					<label for="email">Adresse email * </label><input type="text" name="email"/><br/><br/>
-					<input id="bouton_form" type="submit" value="Inscription"><br/>
-				</form>
-			
-			<?php
+
+<head>
+    <title>Inscription</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="fonts_style/style.css" />
+
+</head>
+
+<body>
+    <div id="container">
+
+        <h1>INSCRIPTION</h1>
+        <a href="index.php">
+            <h2>Cliquez ici pour retourner au site.</h2>
+        </a>'
+
+        
+
+            <form id="form_inscription" action="inscription.php" method="post">
+                <label for="pseudo">Pseudo * </label><input type="text" name="pseudo" /><br/><br/>
+                <label for="pass">Mot de passe * </label><input type="password" name="pass" /><br/><br/>
+                <label for="confirmation">Retapez votre mot de passe * </label><input type="password" name="confirmation" /><br/><br/>
+                <label for="email">Adresse email * </label><input type="text" name="email" /><br/><br/>
+                <input id="bouton_form" type="submit" value="Inscription"><br/>
+            </form>
+
+            <?php
 				
-			if (isset($_POST['pseudo']) AND ($_POST['pass'] AND $_POST['email'])!=NULL)  
+			if (isset($_POST['pseudo']) AND ($_POST['pass'] AND $_POST['email'])!=NULL)
 			{				
 					
 				try
@@ -66,8 +70,9 @@
 				echo'<h2>-- Vous devez remplir tous les champs marqués par * --</h2><br/>';
 			}
 			?>
-		
-			</section>
-		</div>
-	</body>
+
+        
+    </div>
+</body>
+
 </html>
