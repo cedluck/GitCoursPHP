@@ -59,7 +59,9 @@
 			
 			
 		</div>
-	<div style="position: absolute; bottom:0px;"><?php include("footer.php");?></div>			
+		<div style="margin-top:540px;">
+<?php include("footer.php");?>
+</div>
 	</body>
 	
 </html>

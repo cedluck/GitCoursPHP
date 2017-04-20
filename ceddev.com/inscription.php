@@ -11,14 +11,9 @@
 <body>
     <div id="container">
 
-        <h1>INSCRIPTION</h1>
-        <a href="index.php">
-            <h2>Cliquez ici pour retourner au site.</h2>
-        </a>'
-
-        
-
-            <form id="form_inscription" action="inscription.php" method="post">
+        <h1>INSCRIPTION</h1><br/>
+    
+               <form id="form_inscription" action="inscription.php" method="post">
                 <label for="pseudo">Pseudo * </label><input type="text" name="pseudo" /><br/><br/>
                 <label for="pass">Mot de passe * </label><input type="password" name="pass" /><br/><br/>
                 <label for="confirmation">Retapez votre mot de passe * </label><input type="password" name="confirmation" /><br/><br/>
@@ -73,6 +68,10 @@
 
         
     </div>
+
 </body>
+<div style="margin-top:450px;">
+<?php include("footer.php");?>
+</div>
 
 </html>

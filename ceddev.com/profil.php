@@ -11,8 +11,8 @@
 				<h1>MON PROFILE</h1>
 			
 			<section>
-				<h2><a href="index.php">Cliquez ici pour retourner au site.</a><br/>
-				Vous devrez vous reconnecter lorsque vous aurez effectué un changement.</h2>
+				
+				<h2>Vous devrez vous reconnecter lorsque vous aurez effectué un changement.</h2>
 				<form id="form_profile" action="nvpseudo.php" method="POST">
 					<strong>Votre Pseudo </strong><br/><br/>
 					<label for="pseudo">Pseudo actuel</label> <input type="text" name="pseudo" disabled="disabled" value=<?php session_start(); echo $_SESSION['pseudo']; ?> /> <br/>
@@ -37,6 +37,9 @@
 			</section>
 								
 			
+		</div>
+		<div style="margin-top:150px;">
+			<?php include("footer.php");?>
 		</div>
 	</body>
 </html>
