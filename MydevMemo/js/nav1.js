@@ -1,0 +1,158 @@
+var navElt = document.getElementById("navigation1");
+var javElt = document.getElementById("javascript");
+javElt.style.cursor = "pointer";
+var htmlElt = document.getElementById("html");
+htmlElt.style.cursor = "pointer";
+var cssElt = document.getElementById("css");
+cssElt.style.cursor = "pointer";
+var phpElt = document.getElementById("phpMySql");
+phpElt.style.cursor = "pointer";
+
+
+var javascriptLink =[
+    {
+        id: "1",
+        url: "enconstruction.php",
+        title: "Server Web"
+    },
+    {
+        id: "2",
+        url: "enconstruction.php",
+        title: "Dynamisme"
+    },
+    {
+        id: "3",
+        url: "enconstruction.php",
+        title: "D.O.M"
+    },
+    {
+        id: "4",
+        url: "javascriptPoo.php",
+        title: "Poo >>"
+    },
+    {
+        id: "5",
+        url: "javascriptIntro.php",
+        title: "Intro >>"
+    }
+    
+];
+var htmlLink =[
+    {
+        id: "1",
+        url: "htmltableform.php",
+        title: "Table/Form"
+    },
+    {
+        id: "2",
+        url: "htmlstructure.php",
+        title: "Structure"
+    },
+    {
+        id: "3",
+        url: "htmlbases.php",
+        title: "Les bases"
+    }
+    
+];
+var cssLink =[
+    {
+        id: "1",
+        url: "enconstruction.php",
+        title: "Media Queries"
+    },
+    {
+        id: "2",
+        url: "cssflexbox.php",
+        title: "Flexbox"
+    },
+    {
+        id: "3",
+        url: "cssproprietes.php",
+        title: "Feuille de style"
+    }
+    
+];
+var phpLink =[
+    {
+        id: "1",
+        url: "enconstruction.php",
+        title: "Regex"
+    },
+    {
+        id: "2",
+        url: "enconstruction.php",
+        title: "MySQL"
+    },
+    {
+        id: "3",
+        url: "enconstruction.php",
+        title: "Transmission"
+    },
+    {
+        id: "4",
+        url: "enconstruction.php",
+        title: "Les Bases"
+    }
+    
+];
+
+
+function setLink(link){
+            var linkElt = "<a id=\""+link.id+"\" class=\"cat\" href=\""+link.url+"\">"+link.title+"</a>";
+            return linkElt;
+            }
+
+function inputLink(list, elt){
+        
+        list.forEach(function(link){
+            var displayedLink = setLink(link);
+            elt.insertAdjacentHTML("afterEnd", displayedLink);
+            });     
+}
+
+var display = true;
+function displayLink(e){
+     if(display){
+         if(e.target.id==="javascript"){
+            inputLink(javascriptLink, e.target);           
+            display = false;
+        }else if(e.target.id==="html"){
+            inputLink(htmlLink, e.target);          
+            display = false;  
+        }else if(e.target.id==="css"){
+            inputLink(cssLink, e.target);          
+            display = false;
+        }else if(e.target.id==="phpMySql"){
+            inputLink(phpLink, e.target);          
+            display = false;
+        }
+     }else{
+        var classElt  = document.getElementsByClassName("cat");
+        var maxClassElt = classElt.length;
+        for(var i=1;i<=maxClassElt;i++){
+            console.log(document.getElementById(i));
+            console.log(navElt);
+            navElt.removeChild(document.getElementById(i));          
+            display = true;
+        }
+        if(e.target.id==="javascript"){
+            inputLink(javascriptLink, e.target);           
+            display = false;
+        }else if(e.target.id==="html"){
+            inputLink(htmlLink, e.target);          
+            display = false;  
+        }else if(e.target.id==="css"){
+            inputLink(cssLink, e.target);          
+            display = false;
+        }else if(e.target.id==="phpMySql"){
+            inputLink(phpLink, e.target);          
+            display = false;
+        }
+    }
+}
+
+javElt.addEventListener("click", displayLink);
+htmlElt.addEventListener("click", displayLink);
+cssElt.addEventListener("click", displayLink);
+phpElt.addEventListener("click", displayLink);

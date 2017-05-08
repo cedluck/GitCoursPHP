@@ -1,0 +1,27 @@
+[
+    {
+        "id": "1",
+        "url": "enconstruction.php",
+        "title": "section1",
+        "border": "2px solid  #45CE55"
+    },
+    {
+        "id": "2",
+        "url": "enconstruction.php",
+        "title": "section2",
+        "border": "2px solid  #45CE55"
+    },
+    {
+        "id": "3",
+        "url": "enconstruction.php",
+        "title": "section3",
+        "border": "2px solid  #45CE55"
+    },
+    {
+        "id": "4",
+        "url": "enconstruction.php",
+        "title": "section4",
+        "border": "2px solid  #45CE55"
+    }
+    
+]
