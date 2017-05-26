@@ -1,19 +1,19 @@
 [
     {
         "id": "1",
-        "url": "enconstruction.php",
+        "url": "../css/cssmediaqueries.php",
         "title": "Media Queries",
        "border": "2px solid  #0171BA"
     },
     {
         "id": "2",
-        "url": "cssflexbox.php",
+        "url": "../css/cssflexbox.php",
         "title": "Flexbox",
        "border": "2px solid  #0171BA"
     },
     {
         "id": "3",
-        "url": "cssproprietes.php",
+        "url": "../css/cssproprietes.php",
         "title": "Feuille de style",
        "border": "2px solid  #0171BA"
     }   

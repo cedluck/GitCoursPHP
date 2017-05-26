@@ -1,25 +1,37 @@
 [
     {
         "id": "1",
-        "url": "enconstruction.php",
+        "url": "../php/phpregex.php",
         "title": "Regex",
         "border": "2px solid  #8892BF"
     },
     {
         "id": "2",
-        "url": "enconstruction.php",
-        "title": "MySQL",
+        "url": "../php/phpsql.php",
+        "title": "Langage SQL",
         "border": "2px solid  #8892BF"
     },
-    {
+     {
         "id": "3",
-        "url": "enconstruction.php",
-        "title": "Transmission",
+        "url": "../php/phpbdd.php",
+        "title": "Les BDD",
         "border": "2px solid  #8892BF"
     },
     {
         "id": "4",
-        "url": "enconstruction.php",
+        "url": "../php/phptransmission.php",
+        "title": "Transmission",
+        "border": "2px solid  #8892BF"
+    },
+    {
+        "id": "5",
+        "url": "../php/phptabfonction.php",
+        "title": "Tableaux/fonctions",
+        "border": "2px solid  #8892BF"
+    },
+    {
+        "id": "6",
+        "url": "../php/phpbases.php",
         "title": "Les Bases",
         "border": "2px solid  #8892BF"
     }

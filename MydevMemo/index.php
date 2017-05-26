@@ -7,8 +7,7 @@
 
 	</head>
 	<body>
-		<div id="container">
-			<div id="entete">
+		<div id="entete">
 			<?php
 			session_start();
 
@@ -22,7 +21,7 @@
 			}
 
 			?>			
-				<div id="flexDirRow" >
+			<div id="flexDirRow" >
 				<h1>MyDevMemo</h1>
 				<?php
 				try
@@ -34,13 +33,13 @@
 					die ('Erreur : '.$e->getMessage());
 				}
 
-				$req = $bdd->query('SELECT id, titre, contenu, DATE_FORMAT(date_creation, \'%d/%m/%Y à %Hh %imin %ss\') AS date_creation_fr FROM billets ORDER BY date_creation DESC LIMIT 0,1');
+				$req = $bdd->query('SELECT id, titre, contenu, DATE_FORMAT(date_creation, \'%d/%m/%Y à %Hh %imin %ss\') AS date_creation_fr FROM billets ORDER BY date_creation DESC LIMIT 0,2');
 				while ($donnees = $req->fetch())
 				{
 				?>
 				<div id="news">
-				<h3>DERNIERE INFO : <em><?php echo htmlspecialchars($donnees['titre']); ?> le <?php echo $donnees['date_creation_fr']; ?></em>
-				<p><?php echo nl2br(htmlspecialchars($donnees['contenu'])); ?></p></h3>
+				<h3>INFO : <em><?php echo htmlspecialchars($donnees['titre']); ?> le <?php echo $donnees['date_creation_fr']; ?></em></h3>
+				<p class="article"><?php echo nl2br(htmlspecialchars($donnees['contenu'])); ?></p>
 				</div>				
 				<?php
 				}
@@ -48,10 +47,10 @@
 				?>				
 				<br/></br/>
 				<!--<a class="bouton_nav" href="profil.php">Qui je suis ?</a> <a class="bouton_nav" href="profil.php">Mon blog</a>-->
-	 			</div>
-		 	</div>				
-									
-			<div id="central" style="margin-top: 250px;">								
+	 		</div>
+		</div>				
+		<div id="container">							
+			<div id="central">								
 				<nav id="navigation1">
 					<h3>Logiciel</h3>
 					<a id="c" class="bouton_ver_nav" href="enconstruction.php">C++</a>
@@ -69,15 +68,15 @@
 					<article >
 					<h3>POURQUOI FAIRE UN SITE ?</h3>
 						<p class="article">
-						Bon déjà j'adore coder donc... j'ai coder un site.<br/><br/>
-						Ensuite, étant un codeur débutant et comme la programmation est une activité d'une richesse inépuissable, il est difficile de tout retenir d'un coup. De plus j'aime maîtriser plusieurs languages. Donc je me retrouve souvent à chercher un exemple de code que j'ai parcouru pendant ma formation. J'en suis venu a me dire "Pourquoi ne pas avoir un site regroupant tous les petits bouts de codes qui me permettent d'avancer dans mon projet". Et voici la raison principale de l'existence de ce site.<br/><br/>
-						J'en profite pour remercier les personnes qui m'ont aider et former dans cette entreprise : Mathieu Nebra (co-fondateur du site Openclassrooms et formateur), Baptiste Pesquet (enseignant agrégé en informatique à l'ENCSC), et bien sur mon ami Jean-Marc Biechy qui m'a donner le gout pour la programmation.
+							La programmation est une activité d'une richesse inépuissable, il est difficile de tout retenir d'un coup. C'est pourquoi les informaticiens font appel à des documentations pour chaque language qu'ils utilisent. Ces documentations, bien qu'exhaustives et très instructives, sont parfois un peu fastidieuses, surtout pour les programmateurs débutants. C'est pour cela que ce site à été créé : accéder à l'essentiel des informations nécessaires pour coder en l'espace de 	quelques click.<br/>
+							Attention ce site n'est pas là pour apprendre à coder dans différents languages, pour cela il est conseillé de passer par des sites plus spécialisés. Ici vous n'apprendrez pas ce qu'est une variable, une fonction ou ce qu'est la POO, comment bien indenter votre code, les normes de formatage etc... vous devrez déjà savoir cela.<br/><br/>
 						</p>					
 					</article>
 					<article >
 					<h3>CE QUE VOUS Y TROUVEREZ !</h3>
 						<p class="article">
-						Essentiellement du code et ce qu'il donne. Le moins de texte possible mais un minimum quand même. Le but est que chacun s'y retrouve. Mais ne voyez pas ce site comme un MOOC. Tous les codes et les exemples sont repris des différents cours que j'ai suivi sur <em><a href="www.openclassrooms.com">Openclassrooms</a></em>, site que je vous recommande vivement de parcourir si vous voulez vous lancer véritablement dans la programmation informatique.</p>
+							Essentiellement du code et ce qu'il donne. Le moins de texte possible mais un minimum quand même. Le but est que chacun s'y retrouve. Mais ne voyez pas ce site comme un MOOC. Tous les codes et les exemples sont repris des différents cours du MOOC <em><a href="www.openclassrooms.com">Openclassrooms</a></em>, site vivement recommandé si vous voulez vous lancer véritablement dans la programmation informatique.
+						</p>
 						<table>
 							<tr>
 								<td><img src="png/screen1.png"/></td>
@@ -85,14 +84,29 @@
 							</tr>
 						</table>
 						<h6>Quelques images du site !</h6>
-						<p class="article">
-						Il y aura autant que possible le résultat engendré pour chaque code car c'est aussi ça que nous, les développeurs, nous venons chercher...<br/>
-						</p>
 					</article>
 				</section>				
-			</div>		
+			</div>
+		</div>	
+		<div id="footer">	
+			<h5><em>Logiciel</em><br/>		
+			<br/>
+				<a href="enconstruction.php">C++</a><br/>
+				<a href="enconstruction.php">Qt</a><br/>	
+			</h5>
+			<h5><em>Web</em><br/>
+			<br/>
+				<a href="html/htmlbases.php">HTML</a><br/>
+				<a href="css/cssproprietes.php">CSS</a><br/>
+				<a href="javascript/javascriptIntro.php">Javascript</a><br/>
+				<a href="php/phpbases.php">PHP/MySql</a><br/>
+			</h5>
+			<h5><em>Réseaux sociaux</em><br/><br/>
+				<a href="https://github.com/cedluck/GitCoursPHP.git"><img src="png/githubIcon.png"></a><img src="png/fbIcon.png"></a>
+			</h5>
+			<h5><em>Retour à l'accueil</em><br/><br/>
+				<a href="index.php"><img src="png/home.png"></a></h5>
+			<h5>Copyright Cédric Luckett 2017.</h5>
 		</div>
-		<?php include("footer.php");?>
-		
 	</body>	
 </html>

@@ -13,7 +13,7 @@
 			die('Erreur : '.$e->getMessage());
 		}
 		$req = $bdd->prepare('UPDATE  membres SET email = :nvemail WHERE email = :email ');
-		$req->execute(array('nvemail' => $_POST['nvemail'], 'email' => $_SESSION['email']));
+		$req->execute(array('nvemail' => htmlspecialchars($_POST['nvemail']), 'email' => $_SESSION['email']));
 		header('location:connexion.php');
 
 	}
@@ -21,5 +21,3 @@
 	{
 		header('location:profil.php');
 	}
-	
-?>

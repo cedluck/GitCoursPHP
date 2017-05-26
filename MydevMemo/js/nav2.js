@@ -14,14 +14,15 @@ var phpElt = document.getElementById("phpMySql");
 phpElt.style.cursor = "pointer";
 
 
-function inputLink(list, elt){
-    ajaxGet("http://localhost:8888/cours/MyDevMemo/js/data/"+list+".json", function(reponse){
+function inputLink(list){
+    ajaxGet("../js/data/"+list+".json", function(reponse){
         var listJson = JSON.parse(reponse);
+        
             
         listJson.forEach(function(link){
             navElt.style.border = link.border;
             var displayedLink = "<a id=\""+link.id+"\" class=\"cat\" href=\""+link.url+"\">"+link.title+"</a>";
-            elt.insertAdjacentHTML("afterBegin", displayedLink);
+            navElt.insertAdjacentHTML("afterBegin", displayedLink);
             });
     })
 }
@@ -34,7 +35,7 @@ function displayLink(e){
         for(var i=1;i<=maxClassElt;i++){
             navElt.removeChild(document.getElementById(i));        
         }
-        inputLink(e.target.id, navElt);
+        inputLink(e.target.id);
         //entete1.style.height = "150px";
         //display = true;
     }

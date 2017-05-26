@@ -25,6 +25,7 @@
 body
 {
 	background-color: #cbedf2;
+	font-family: "caviar_dreamsregular", arial, Verdana, sans-serif;
 }
 #container
 {
@@ -33,17 +34,14 @@ body
 	margin: auto;
 	display: flex;
 	flex-direction: column;
-	font-family: "caviar_dreamsregular", arial, Verdana, sans-serif;
+	
 }
 #entete
 {
-	margin: -24px 0px 0px 0px;
+	margin-top: -24px;
 	background-image: url("rto-web-banner.png");	
 	position: fixed;
-	/*align-items: center;*/
-	vertical-align: center;
-	border-radius: 0px 0px 100px 0px;
-	width:70%;
+	width:99%;
 	box-shadow: 2px 2px 2px black;
 	/*margin-left: 100px;*/
 }
@@ -61,11 +59,11 @@ body
 	width:450px;
 	margin: auto;
 }
-
-.central
+#central
 {
-	margin-top: 250px;
+	margin-top: 280px;
 }
+
 .console, pre
 {
 	background: #393F4C;
@@ -75,6 +73,7 @@ body
 	padding: 10px;
 	border-radius: 10px;
 	font-family: arial;
+	text-align: justify;
 }
 code
 {
@@ -132,13 +131,13 @@ nav
 }
 section
 {
+	margin-top: 25px;
 	/*border: solid black;*/
 	text-align: justify;
 }
 article
 {
-	/*border: solid purple;*/
-
+	
 	padding:30px;
 	margin-top:-40px;
 	margin-left: 150px;
@@ -146,6 +145,7 @@ article
 .article
 {
 	background-color: white;
+	border-radius: 20px 0px 20px 0px ;
 	padding: 20px;
 }
 table
@@ -192,7 +192,7 @@ th
 	padding: 2px 10px;
 	color: white;
 	text-align: center;
-	width:120px;
+	width:140px;
 	border-radius:20px 0px 20px 0px;
 	box-shadow: 2px 2px 0px rgb(84, 203, 221);
 }
@@ -223,9 +223,9 @@ th
 }
 .bouton_ver_nav:hover
 {
+	background: #1871a3;
 	width: 105px;
 	height: 18px;
-	opacity: 0.7;
 }
 .bouton_ver_nav:active
 {
@@ -260,18 +260,16 @@ th
 .cat
 {
 	display:flex;
-	flex-direction: row;
-	justify-content: flex-end;
-	font-style: italic;
+	flex-direction: column;
+	text-align: center;
 	background: #002D44;
 	color: white;
-	text-align: center;
+	font-style: italic;
+	font-size: 0.7em;
 	margin-top: 2px;
 	margin-left: 20px;
 	width: 120px;
-	font-size: 0.7em;
 	padding :1px;
-	flex-direction: column;
 	border: 1px solid black;
 	box-shadow:  1px 1px 0px rgba(84, 203, 221, 1);
 	border-radius: 5px 0px 5px 0px;
@@ -393,6 +391,10 @@ p
 	
 	font-size: 1.1em;
 }
+strong
+{
+	color: #55a1e0;
+}
 
 /*---FORMULAIRES---------------*/
 #form_connexion
@@ -430,6 +432,20 @@ img
 	border: 0px solid black;
 	margin-right: 20px;
 }
+/*---MEDIA QUERIES---------*/
+@media screen and (max-width: 1523px)
+{
+	section
+	{
+		margin-top: 75px;
+	}    
 
+}
+@media screen and (max-width: 910px)
+{
+	section
+	{
+		margin-top: 125px;
+	}    
 
-
+}

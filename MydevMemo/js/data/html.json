@@ -1,19 +1,19 @@
 [
     {
         "id": "1",
-        "url": "htmltableform.php",
+        "url": "../html/htmltableform.php",
         "title": "Table/Form",
         "border": "2px solid  #EF652A"
     },
     {
         "id": "2",
-        "url": "htmlstructure.php",
+        "url": "../html/htmlstructure.php",
         "title": "Structure",
         "border": "2px solid  #EF652A"
     },
     {
         "id": "3",
-        "url": "htmlbases.php",
+        "url": "../html/htmlbases.php",
         "title": "Les bases",
         "border": "2px solid  #EF652A"
     }    

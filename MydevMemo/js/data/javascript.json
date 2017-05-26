@@ -19,13 +19,13 @@
     },
     {
         "id": "4",
-        "url": "javascriptPoo.php",
+        "url": "../javascript/javascriptPoo.php",
         "title": "Poo >>",
         "border": "2px solid #F7DF1E"
     },
     {
         "id": "5",
-        "url": "javascriptIntro.php",
+        "url": "../javascript/javascriptIntro.php",
         "title": "Intro >>",
         "border": "2px solid #F7DF1E"
     }

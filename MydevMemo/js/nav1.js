@@ -27,12 +27,12 @@ var javascriptLink =[
     },
     {
         id: "4",
-        url: "javascriptPoo.php",
+        url: "javascript/javascriptPoo.php",
         title: "Poo >>"
     },
     {
         id: "5",
-        url: "javascriptIntro.php",
+        url: "javascript/javascriptIntro.php",
         title: "Intro >>"
     }
     
@@ -40,17 +40,17 @@ var javascriptLink =[
 var htmlLink =[
     {
         id: "1",
-        url: "htmltableform.php",
+        url: "html/htmltableform.php",
         title: "Table/Form"
     },
     {
         id: "2",
-        url: "htmlstructure.php",
+        url: "html/htmlstructure.php",
         title: "Structure"
     },
     {
         id: "3",
-        url: "htmlbases.php",
+        url: "html/htmlbases.php",
         title: "Les bases"
     }
     
@@ -58,17 +58,17 @@ var htmlLink =[
 var cssLink =[
     {
         id: "1",
-        url: "enconstruction.php",
+        url: "css/cssmediaqueries.php",
         title: "Media Queries"
     },
     {
         id: "2",
-        url: "cssflexbox.php",
+        url: "css/cssflexbox.php",
         title: "Flexbox"
     },
     {
         id: "3",
-        url: "cssproprietes.php",
+        url: "css/cssproprietes.php",
         title: "Feuille de style"
     }
     
@@ -76,22 +76,32 @@ var cssLink =[
 var phpLink =[
     {
         id: "1",
-        url: "enconstruction.php",
+        url: "php/phpregex.php",
         title: "Regex"
     },
     {
         id: "2",
-        url: "enconstruction.php",
-        title: "MySQL"
+        url: "php/phpsql.php",
+        title: "Langage SQL"
     },
     {
         id: "3",
-        url: "enconstruction.php",
-        title: "Transmission"
+        url: "php/phpbdd.php",
+        title: "Les BDD"
     },
     {
         id: "4",
-        url: "enconstruction.php",
+        url: "php/phptransmission.php",
+        title: "Transmission"
+    },
+    {
+        id: "5",
+        url: "php/phptabfonction.php",
+        title: "Tableaux/fonctions"
+    },
+    {
+        id: "6",
+        url: "php/phpbases.php",
         title: "Les Bases"
     }
     

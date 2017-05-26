@@ -1,9 +1,3 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>pass</title>
-</head>
-<body>
 <?php
 session_start();
 
@@ -53,9 +47,3 @@ else
 {
 	echo '<h3>Entrez votre ancien mot de passe ! <a href="profil.php"> Retour</a></h3>';
 }
-	
-
-
-?>
-</body>
-</html>
